@@ -1,3 +1,64 @@
-document.getElementById("clickBtn").addEventListener("click", () => {
-  alert("고운차림은 단정함과 편안함이 공존하는 일상의 옷차림을 추구합니다.");
-});
+/* 고운차림 스타일 */
+body {
+  background-color: #faf7f2;
+  color: #3d2b1f;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* 헤더 */
+header {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  color: #8b7355;
+}
+
+/* 본문 */
+main p {
+  font-size: 1rem;
+  margin: 8px 0;
+}
+
+/* 버튼 */
+button {
+  margin-top: 30px;
+  padding: 12px 28px;
+  background-color: #d8c3a5;
+  color: #3d2b1f;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background-color: #e4d1b9;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #c9b39a;
+  transform: translateY(0);
+}
+
+/* 푸터 */
+footer {
+  margin-top: 80px;
+  font-size: 0.9rem;
+  color: #8b7355;
+}
