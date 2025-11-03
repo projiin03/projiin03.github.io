@@ -1,3 +1,3 @@
 document.getElementById("clickBtn").addEventListener("click", () => {
-  alert("환영합니다! 🎉 첫 클릭 성공!");
+  alert("고운차림은 단정함과 편안함이 공존하는 일상의 옷차림을 추구합니다.");
 });
