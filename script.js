@@ -1,3 +1,13 @@
-document.getElementById("clickBtn").addEventListener("click", () => {
-  alert("고운차림은 단정함과 편안함이 공존하는 일상의 옷차림을 추구합니다.");
-});
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000); // 4초마다 전환
+}
