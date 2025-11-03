@@ -1,66 +1,91 @@
-/* 고운차림 스타일 */
 body {
+  margin: 0;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
   background-color: #faf7f2;
   color: #3d2b1f;
-  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  line-height: 1.8;
 }
 
 /* 헤더 */
 header {
-  margin-top: 80px;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #f5efe6;
+  border-bottom: 1px solid #e0d4c0;
 }
 
-h1 {
-  font-size: 3rem;
-  letter-spacing: 3px;
-  margin-bottom: 8px;
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3d2b1f;
 }
 
-.slogan {
-  font-size: 1.2rem;
+nav a {
+  text-decoration: none;
+  color: #3d2b1f;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
   color: #8b7355;
 }
 
-/* 본문 */
-main p {
-  font-size: 1rem;
-  margin: 8px 0;
+/* 메인 배너 */
+.hero {
+  position: relative;
+  text-align: center;
 }
 
-/* 버튼 */
-button {
-  margin-top: 30px;
-  padding: 12px 28px;
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(250, 247, 242, 0.8);
+  padding: 30px 50px;
+  border-radius: 8px;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
   background-color: #d8c3a5;
   color: #3d2b1f;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
+  padding: 12px 28px;
   font-size: 1rem;
-  font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: 0.3s;
 }
 
-button:hover {
+.hero-text button:hover {
   background-color: #e4d1b9;
-  transform: translateY(-2px);
-}
-
-button:active {
-  background-color: #c9b39a;
-  transform: translateY(0);
 }
 
 /* 푸터 */
 footer {
-  margin-top: 80px;
-  font-size: 0.9rem;
+  background-color: #f5efe6;
+  text-align: center;
+  padding: 30px;
   color: #8b7355;
+  font-size: 0.9rem;
 }
+
 
 
