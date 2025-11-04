@@ -34,10 +34,10 @@
   <section class="category">
     <h2>상의</h2>
     <div class="gallery large-gallery">
-      <div class="large-item fade-in">
+      <div class="large-item fade-in" data-title="린넨 셔츠" data-desc="고운 질감의 린넨 소재 셔츠입니다. 여름철 데일리룩으로 추천드립니다.">
         <img src="KakaoTalk_20251104_094822590.png" alt="상의1">
       </div>
-      <div class="large-item fade-in">
+      <div class="large-item fade-in" data-title="베이지 블라우스" data-desc="부드러운 곡선과 내추럴한 색감의 블라우스입니다.">
         <img src="KakaoTalk_20251104_094823873.png" alt="상의2">
       </div>
     </div>
@@ -47,10 +47,10 @@
   <section class="category">
     <h2>하의</h2>
     <div class="gallery large-gallery">
-      <div class="large-item fade-in">
+      <div class="large-item fade-in" data-title="린넨 팬츠" data-desc="시원한 린넨 원단으로 제작된 와이드 팬츠입니다.">
         <img src="KakaoTalk_20251104_094816332.png" alt="하의1">
       </div>
-      <div class="large-item fade-in">
+      <div class="large-item fade-in" data-title="베이직 슬랙스" data-desc="심플하면서도 고급스러운 기본 슬랙스 디자인.">
         <img src="KakaoTalk_20251104_094822590.png" alt="하의2">
       </div>
     </div>
@@ -60,10 +60,10 @@
   <section class="category">
     <h2>세트</h2>
     <div class="gallery large-gallery">
-      <div class="large-item fade-in">
+      <div class="large-item fade-in" data-title="린넨 투피스" data-desc="상의와 하의 모두 린넨 소재로 제작된 시원한 세트.">
         <img src="KakaoTalk_20251104_094823873.png" alt="세트1">
       </div>
-      <div class="large-item fade-in">
+      <div class="large-item fade-in" data-title="내추럴 세트업" data-desc="편안함과 세련됨을 동시에 담은 세트웨어.">
         <img src="KakaoTalk_20251104_094816332.png" alt="세트2">
       </div>
     </div>
@@ -73,9 +73,20 @@
     <p>© 2025 GOUNCHARIM. All rights reserved.</p>
   </footer>
 
+  <!-- 팝업 (상세보기) -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <img id="popup-img" src="" alt="상세 이미지">
+      <h3 id="popup-title"></h3>
+      <p id="popup-desc"></p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
