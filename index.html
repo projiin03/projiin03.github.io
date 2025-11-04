@@ -1,111 +1,67 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>고운차림 | 단정함 속의 아름다움</title>
-  <link rel="stylesheet" href="style.css?v=7.0" />
-  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고운차림 GOUNCHARIM</title>
+
+  <!-- 폰트 로드 -->
+  <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HY견고딕.woff2" rel="stylesheet" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 헤더 -->
   <header>
-  <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HY견고딕.woff2" rel="stylesheet" as="font" type="font/woff2" crossorigin>
-    <div class="logo">GOUNCHARIM</div>
+    <h1>GOUNCHARIM</h1>
     <nav>
       <a href="#">HOME</a>
       <a href="#">ABOUT</a>
       <a href="#">COLLECTION</a>
       <a href="#">CONTACT</a>
     </nav>
-    <button id="kakao-login-btn" class="kakao">카카오 로그인</button>
+    <button class="kakao-login">카카오 로그인</button>
   </header>
 
-  <!-- 메인 배너 -->
   <section class="hero">
-    <div class="slide fade">
-      <img src="banner1.jpg" alt="배너1" 
-        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=2000&q=90';" />
-      <div class="text-box">
-        <h1>단정함 속의 아름다움</h1>
-        <p>고운차림 2025 Spring Collection</p>
-      </div>
+    <div class="overlay">
+      <h2>고운차림의 감성</h2>
+      <p>Simple. Natural. Elegant.</p>
     </div>
+  </section>
 
-    <div class="slide fade">
-      <img src="banner2.jpg" alt="배너2"
-        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=2000&q=90';" />
-      <div class="text-box">
-        <h1>편안함이 주는 품격</h1>
-        <p>자연스러운 실루엣과 고운 선의 조화</p>
+  <section class="gallery">
+    <h2>2025 S/S COLLECTION</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="원피스">
+        <h3>플로럴 원피스</h3>
+        <p>봄을 담은 부드러운 실루엣</p>
       </div>
-    </div>
-
-    <div class="slide fade">
-      <img src="banner3.jpg" alt="배너3"
-        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=2000&q=90';" />
-      <div class="text-box">
-        <h1>고운차림의 감성</h1>
-        <p>Simple, Natural, Elegant</p>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a" alt="자켓">
+        <h3>린넨 자켓</h3>
+        <p>자연스러운 고운 감성의 라인</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e" alt="블라우스">
+        <h3>화이트 블라우스</h3>
+        <p>단정함 속의 아름다움</p>
       </div>
     </div>
   </section>
 
-  <!-- 소개 -->
-  <section class="intro">
-    <h2>About GOUNCHARIM</h2>
-    <p>‘고운차림’은 전통의 단정함과 현대의 미감을 담아,  
-       자연스러움 속 품격을 추구하는 브랜드입니다.</p>
-  </section>
-
-  <!-- 푸터 -->
   <footer>
     <p>© 2025 GOUNCHARIM. All rights reserved.</p>
   </footer>
+</body>
+</html>
 
-  <script src="script.js?v=7.0"></script>
-    <!-- 소개 -->
-  <section class="intro">
-    <h2>About GOUNCHARIM</h2>
-    <p>‘고운차림’은 전통의 단정함과 현대의 미감을 담아,  
-       자연스러움 속 품격을 추구하는 브랜드입니다.</p>
-  </section>
-
-  <!-- 상품 갤러리 -->
-  <section class="gallery">
-    <h2>2025 Spring Collection</h2>
-    <div class="gallery-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1618354691323-2c8d7a93b2f8?auto=format&fit=crop&w=800&q=80" alt="원피스">
-        <div class="info">
-          <h3>리넨 원피스</h3>
-          <p>자연스러운 실루엣의 고운 원단</p>
-          <button>자세히 보기</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1618354691651-2eaa2efad1f3?auto=format&fit=crop&w=800&q=80" alt="셔츠">
-        <div class="info">
-          <h3>화이트 셔츠</h3>
-          <p>심플함 속의 단정한 아름다움</p>
-          <button>자세히 보기</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1618354691842-6b38f4a3dbe8?auto=format&fit=crop&w=800&q=80" alt="스커트">
-        <div class="info">
-          <h3>플리츠 스커트</h3>
-          <p>가볍고 우아한 실루엣</p>
-          <button>자세히 보기</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
 </body>
 </html>
+
 
 
 
