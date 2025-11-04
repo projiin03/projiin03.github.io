@@ -7,117 +7,122 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- 좌우 은은한 사이드 장식 -->
-  <div class="side-decor left"></div>
-  <div class="side-decor right"></div>
-
-  <!-- 헤더 -->
   <header>
     <h1>GOUNCHARIM</h1>
     <nav>
-      <a href="#">HOME</a>
-      <a href="#">ABOUT</a>
-      <a href="#collection">COLLECTION</a>
-      <a href="#">CONTACT</a>
+      <a href="#top">HOME</a>
+      <a href="#top">ABOUT</a>
+      <a href="#tops">TOP</a>
+      <a href="#bottoms">BOTTOM</a>
+      <a href="#sets">SET</a>
+      <a href="#contact">CONTACT</a>
     </nav>
     <button class="kakao-login">카카오 로그인</button>
   </header>
 
-  <!-- 좌측 고정 SNS 아이콘 -->
-  <div class="side-icons" aria-label="social">
-    <a href="#" title="Instagram">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-    <a href="#" title="YouTube">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-    </a>
-  </div>
-
-  <!-- 히어로 배너 -->
-  <section class="hero">
+  <!-- Hero -->
+  <section id="top" class="hero">
     <div class="overlay">
       <h2>고운차림의 감성</h2>
       <p>단정함 속의 아름다움</p>
     </div>
   </section>
 
-  <!-- 갤러리 / 상품 리스트 -->
-  <section id="collection" class="gallery">
-    <h2>2025 S/S COLLECTION</h2>
-
+  <!-- 상의 -->
+  <section id="tops" class="category-section">
+    <h2>상의</h2>
     <div class="card-container">
-      <!-- 카드 1 -->
-      <article class="card fade-in"
-        data-title="플로럴 원피스"
-        data-price="₩89,000"
-        data-desc="봄을 담은 부드러운 실루엣의 플로럴 원피스"
-        data-img="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop" alt="플로럴 원피스">
+      <article class="card fade-in" data-title="베이직 셔츠" data-price="₩59,000" data-desc="깔끔한 실루엣의 데일리 셔츠" data-img="https://images.unsplash.com/photo-1581089781785-603411fa81e5?q=80&w=1000&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?q=80&w=800&auto=format&fit=crop" alt="셔츠">
         <div class="card-body">
-          <h3>플로럴 원피스</h3>
-          <p class="price">₩89,000</p>
+          <h3>베이직 셔츠</h3>
+          <p class="price">₩59,000</p>
           <div class="actions">
-            <button class="cart-btn" type="button">🛒 장바구니</button>
-            <button class="more-btn" type="button">자세히 보기</button>
+            <button class="cart-btn">🛒 장바구니</button>
+            <button class="more-btn">자세히 보기</button>
           </div>
         </div>
       </article>
-
-      <!-- 카드 2 -->
-      <article class="card fade-in"
-        data-title="린넨 자켓"
-        data-price="₩129,000"
-        data-desc="자연스러운 고운 감성의 실루엣, 통기성 좋은 린넨"
-        data-img="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a?q=80&w=1200&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a?q=80&w=800&auto=format&fit=crop" alt="린넨 자켓">
+      <article class="card fade-in" data-title="니트 가디건" data-price="₩79,000" data-desc="부드러운 감촉의 봄 니트 가디건" data-img="https://images.unsplash.com/photo-1593032457862-9fcb96b9a4ab?q=80&w=1000&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1593032457862-9fcb96b9a4ab?q=80&w=800&auto=format&fit=crop" alt="가디건">
         <div class="card-body">
-          <h3>린넨 자켓</h3>
-          <p class="price">₩129,000</p>
+          <h3>니트 가디건</h3>
+          <p class="price">₩79,000</p>
           <div class="actions">
-            <button class="cart-btn" type="button">🛒 장바구니</button>
-            <button class="more-btn" type="button">자세히 보기</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- 카드 3 -->
-      <article class="card fade-in"
-        data-title="화이트 블라우스"
-        data-price="₩69,000"
-        data-desc="단정함 속의 아름다움을 담은 베이식 블라우스"
-        data-img="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800&auto=format&fit=crop" alt="화이트 블라우스">
-        <div class="card-body">
-          <h3>화이트 블라우스</h3>
-          <p class="price">₩69,000</p>
-          <div class="actions">
-            <button class="cart-btn" type="button">🛒 장바구니</button>
-            <button class="more-btn" type="button">자세히 보기</button>
+            <button class="cart-btn">🛒 장바구니</button>
+            <button class="more-btn">자세히 보기</button>
           </div>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- 상세 팝업(모달) -->
-  <div id="product-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <!-- 하의 -->
+  <section id="bottoms" class="category-section">
+    <h2>하의</h2>
+    <div class="card-container">
+      <article class="card fade-in" data-title="린넨 팬츠" data-price="₩69,000" data-desc="여름에도 시원한 린넨 팬츠" data-img="https://images.unsplash.com/photo-1521575107034-e0fa0b594529?q=80&w=1000&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1521575107034-e0fa0b594529?q=80&w=800&auto=format&fit=crop" alt="팬츠">
+        <div class="card-body">
+          <h3>린넨 팬츠</h3>
+          <p class="price">₩69,000</p>
+          <div class="actions">
+            <button class="cart-btn">🛒 장바구니</button>
+            <button class="more-btn">자세히 보기</button>
+          </div>
+        </div>
+      </article>
+      <article class="card fade-in" data-title="슬랙스" data-price="₩89,000" data-desc="정갈한 실루엣의 슬림핏 슬랙스" data-img="https://images.unsplash.com/photo-1604335399105-3f6f6b4a1fa1?q=80&w=1000&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1604335399105-3f6f6b4a1fa1?q=80&w=800&auto=format&fit=crop" alt="슬랙스">
+        <div class="card-body">
+          <h3>슬랙스</h3>
+          <p class="price">₩89,000</p>
+          <div class="actions">
+            <button class="cart-btn">🛒 장바구니</button>
+            <button class="more-btn">자세히 보기</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 상하의 -->
+  <section id="sets" class="category-section">
+    <h2>상하의 세트</h2>
+    <div class="card-container">
+      <article class="card fade-in" data-title="린넨 세트업" data-price="₩139,000" data-desc="가벼운 착용감의 린넨 투피스 세트" data-img="https://images.unsplash.com/photo-1617136499278-59e8c1c7c1e8?q=80&w=1000&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1617136499278-59e8c1c7c1e8?q=80&w=800&auto=format&fit=crop" alt="세트업">
+        <div class="card-body">
+          <h3>린넨 세트업</h3>
+          <p class="price">₩139,000</p>
+          <div class="actions">
+            <button class="cart-btn">🛒 장바구니</button>
+            <button class="more-btn">자세히 보기</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 GOUNCHARIM. All rights reserved.</p>
+  </footer>
+
+  <div id="product-modal" class="modal">
     <div class="modal-content">
-      <button class="close" aria-label="닫기">&times;</button>
+      <button class="close">&times;</button>
       <img id="modal-img" src="" alt="">
       <h3 id="modal-title"></h3>
       <p id="modal-price" class="price"></p>
       <p id="modal-desc" class="desc"></p>
-      <button class="cart-btn wide" type="button">🛒 장바구니 담기</button>
     </div>
   </div>
-
-  <footer>
-    <p>© 2025 GOUNCHARIM. All rights reserved.</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
