@@ -1,41 +1,145 @@
-@font-face{
-  font-family:'HY견고딕';
-  src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HY견고딕.woff2') format('woff2');
+body {
+  margin: 0;
+  font-family: 'HYGothic-Medium', sans-serif;
+  background-color: #faf7f2;
+  color: #2d2d2d;
 }
-body{margin:0;font-family:'HY견고딕',sans-serif;background:#fdfbf7;color:#2b2a27;}
 
-/* HEADER */
-header{display:flex;justify-content:space-between;align-items:center;background:#f5ede6;padding:14px 40px;position:sticky;top:0;z-index:10;border-bottom:1px solid #e7dfd3;}
-header h1{margin:0;}
-nav a{text-decoration:none;color:#3a2f28;margin:0 12px;transition:.2s;}
-nav a:hover{color:#b89f7b;}
-.kakao-login{background:#fee500;border:none;border-radius:18px;padding:8px 14px;cursor:pointer;}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #f6efe9;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-/* HERO */
-.hero{height:450px;background:url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;position:relative;}
-.overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,0.8);padding:20px 30px;border-radius:12px;text-align:center;}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
-/* CATEGORY */
-.category-section{padding:60px 20px;text-align:center;transition:background .5s;}
-.category-section:nth-child(odd){background:#fefcf9;}
-.category-section:nth-child(even){background:#f8f4ef;}
-.card-container{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;max-width:1100px;margin:0 auto;}
-.card{width:260px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.08);opacity:0;transform:translateY(20px);transition:all .8s;}
-.card.visible{opacity:1;transform:translateY(0);}
-.card img{width:100%;height:300px;object-fit:cover;}
-.card-body{padding:12px;}
-.price{color:#8a6a4f;margin:4px 0;}
-.actions button{border:none;border-radius:8px;padding:8px 10px;margin:4px;cursor:pointer;background:#dfc7a6;transition:.2s;}
-.actions button:hover{transform:translateY(-2px);}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-/* MODAL */
-.modal{display:none;position:fixed;inset:0;align-items:center;justify-content:center;background:rgba(250,245,239,.9);}
-.modal-content{background:#fff;border-radius:12px;padding:20px;width:400px;max-width:90vw;text-align:center;position:relative;}
-.modal-content img{width:100%;border-radius:10px;}
-.close{position:absolute;top:6px;right:10px;background:none;border:none;font-size:28px;cursor:pointer;color:#444;}
-.close:hover{color:#000;}
+.navbar li {
+  margin-left: 25px;
+}
 
-footer{text-align:center;padding:20px;background:#f5ede6;margin-top:60px;}
+.navbar a {
+  text-decoration: none;
+  color: #3b2d1f;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #9d7c5a;
+}
+
+.kakao-btn {
+  background-color: #ffe812;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(85%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.category {
+  text-align: center;
+  margin: 80px auto;
+}
+
+.category h2 {
+  font-size: 30px;
+  color: #3b2d1f;
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.item {
+  width: 380px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease;
+}
+
+.item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #5f4b3a;
+  background: #f6efe9;
+}
+
 
 
 
