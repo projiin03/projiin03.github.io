@@ -2,31 +2,38 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>고운차림 GOUNCHARIM</title>
-
-  <!-- HY견고딕 폰트 -->
-  <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HY견고딕.woff2" rel="stylesheet" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <!-- 좌우 은은한 사이드 장식 -->
+  <div class="side-decor left"></div>
+  <div class="side-decor right"></div>
+
+  <!-- 헤더 -->
   <header>
     <h1>GOUNCHARIM</h1>
     <nav>
       <a href="#">HOME</a>
       <a href="#">ABOUT</a>
-      <a href="#">COLLECTION</a>
+      <a href="#collection">COLLECTION</a>
       <a href="#">CONTACT</a>
     </nav>
     <button class="kakao-login">카카오 로그인</button>
   </header>
 
-  <!-- 좌측 SNS 아이콘 -->
-  <div class="side-icons">
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="YouTube"></a>
+  <!-- 좌측 고정 SNS 아이콘 -->
+  <div class="side-icons" aria-label="social">
+    <a href="#" title="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="#" title="YouTube">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
   </div>
 
+  <!-- 히어로 배너 -->
   <section class="hero">
     <div class="overlay">
       <h2>고운차림의 감성</h2>
@@ -34,40 +41,73 @@
     </div>
   </section>
 
-  <section class="gallery">
+  <!-- 갤러리 / 상품 리스트 -->
+  <section id="collection" class="gallery">
     <h2>2025 S/S COLLECTION</h2>
+
     <div class="card-container">
-      <div class="card fade-in" data-title="플로럴 원피스" data-desc="봄을 담은 부드러운 실루엣" data-price="89,000원" data-img="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="원피스">
-        <h3>플로럴 원피스</h3>
-        <p class="price">₩89,000</p>
-        <button class="cart-btn">🛒 장바구니 담기</button>
-      </div>
+      <!-- 카드 1 -->
+      <article class="card fade-in"
+        data-title="플로럴 원피스"
+        data-price="₩89,000"
+        data-desc="봄을 담은 부드러운 실루엣의 플로럴 원피스"
+        data-img="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop" alt="플로럴 원피스">
+        <div class="card-body">
+          <h3>플로럴 원피스</h3>
+          <p class="price">₩89,000</p>
+          <div class="actions">
+            <button class="cart-btn" type="button">🛒 장바구니</button>
+            <button class="more-btn" type="button">자세히 보기</button>
+          </div>
+        </div>
+      </article>
 
-      <div class="card fade-in" data-title="린넨 자켓" data-desc="자연스러운 고운 감성의 라인" data-price="129,000원" data-img="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a">
-        <img src="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a" alt="자켓">
-        <h3>린넨 자켓</h3>
-        <p class="price">₩129,000</p>
-        <button class="cart-btn">🛒 장바구니 담기</button>
-      </div>
+      <!-- 카드 2 -->
+      <article class="card fade-in"
+        data-title="린넨 자켓"
+        data-price="₩129,000"
+        data-desc="자연스러운 고운 감성의 실루엣, 통기성 좋은 린넨"
+        data-img="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a?q=80&w=1200&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a?q=80&w=800&auto=format&fit=crop" alt="린넨 자켓">
+        <div class="card-body">
+          <h3>린넨 자켓</h3>
+          <p class="price">₩129,000</p>
+          <div class="actions">
+            <button class="cart-btn" type="button">🛒 장바구니</button>
+            <button class="more-btn" type="button">자세히 보기</button>
+          </div>
+        </div>
+      </article>
 
-      <div class="card fade-in" data-title="화이트 블라우스" data-desc="단정함 속의 아름다움" data-price="69,000원" data-img="https://images.unsplash.com/photo-1558769132-cb1aea458c5e">
-        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e" alt="블라우스">
-        <h3>화이트 블라우스</h3>
-        <p class="price">₩69,000</p>
-        <button class="cart-btn">🛒 장바구니 담기</button>
-      </div>
+      <!-- 카드 3 -->
+      <article class="card fade-in"
+        data-title="화이트 블라우스"
+        data-price="₩69,000"
+        data-desc="단정함 속의 아름다움을 담은 베이식 블라우스"
+        data-img="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800&auto=format&fit=crop" alt="화이트 블라우스">
+        <div class="card-body">
+          <h3>화이트 블라우스</h3>
+          <p class="price">₩69,000</p>
+          <div class="actions">
+            <button class="cart-btn" type="button">🛒 장바구니</button>
+            <button class="more-btn" type="button">자세히 보기</button>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- 팝업 -->
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <span class="close">&times;</span>
-      <img id="popup-img" src="" alt="">
-      <h3 id="popup-title"></h3>
-      <p id="popup-desc"></p>
-      <p id="popup-price" class="price"></p>
+  <!-- 상세 팝업(모달) -->
+  <div id="product-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="close" aria-label="닫기">&times;</button>
+      <img id="modal-img" src="" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-price" class="price"></p>
+      <p id="modal-desc" class="desc"></p>
+      <button class="cart-btn wide" type="button">🛒 장바구니 담기</button>
     </div>
   </div>
 
@@ -78,6 +118,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
