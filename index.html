@@ -1,221 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>고운차림 GOUNCHARIM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Noto Sans KR', sans-serif;
-      background-color: #faf7f3;
-      color: #2e2a25;
-      scroll-behavior: smooth;
-    }
-
-    /* 헤더 */
-    header {
-      background-color: #f5eee8;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #2e2a25;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #a37a4a; }
-
-    .login-btn {
-      background-color: #fcd94d;
-      border: none;
-      border-radius: 20px;
-      padding: 8px 15px;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    /* 히어로 */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 70vh;
-      background: url('슬렉스 사진.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-text {
-      background: rgba(255,255,255,0.7);
-      padding: 40px 60px;
-      border-radius: 15px;
-      text-align: center;
-      animation: fadeIn 1.5s ease forwards;
-    }
-    .hero-text h2 {
-      margin: 0;
-      font-size: 32px;
-      font-weight: 700;
-    }
-    .hero-text p {
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* 카테고리 섹션 */
-    section {
-      padding: 100px 10%;
-    }
-    h2.section-title {
-      text-align: center;
-      font-size: 28px;
-      margin-bottom: 50px;
-      font-weight: 700;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      justify-items: center;
-    }
-
-    .item {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-    }
-    .item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: brightness(95%);
-      transition: all 0.4s ease;
-    }
-    .item:hover img {
-      transform: scale(1.05);
-      filter: brightness(80%);
-    }
-    .item-text {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(255,255,255,0.8);
-      padding: 8px 15px;
-      border-radius: 10px;
-      font-weight: 600;
-    }
-
-    /* 하단 */
-    footer {
-      text-align: center;
-      padding: 50px 0;
-      font-size: 13px;
-      color: #888;
-      background: #f5eee8;
-      margin-top: 80px;
-    }
-
-    /* 스크롤 애니메이션 */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 1s ease;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고운차림</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+  <!-- 상단 네비게이션 -->
   <header>
-    <h1>GOUNCHARIM</h1>
+    <div class="logo">GOUNCHARIM</div>
     <nav>
       <a href="#top">HOME</a>
-      <a href="#top-category">상의</a>
-      <a href="#bottom-category">하의</a>
-      <a href="#set-category">세트</a>
+      <a href="#top-section">상의</a>
+      <a href="#bottom-section">하의</a>
+      <a href="#set-section">상하의</a>
     </nav>
-    <button class="login-btn">카카오 로그인</button>
+    <button class="kakao-login">카카오 로그인</button>
   </header>
 
-  <section class="hero" id="top">
-    <div class="hero-text">
-      <h2>고운차림의 감성</h2>
+  <!-- 메인 배너 -->
+  <section class="main-banner">
+    <img src="슬렉스 바지.jpg" alt="고운차림 메인 배너">
+    <div class="banner-text">
+      <h1>고운차림의 감성</h1>
       <p>단정함 속의 아름다움</p>
     </div>
   </section>
 
-  <!-- 상의 -->
-  <section id="top-category" class="fade-in">
-    <h2 class="section-title">상의</h2>
-    <div class="gallery">
-      <div class="item"><img src="JPG 2.jpg" alt="상의1"><div class="item-text">린넨 셔츠</div></div>
-      <div class="item"><img src="JPG 3.jpg" alt="상의2"><div class="item-text">오버핏 블라우스</div></div>
+  <!-- 상의 섹션 -->
+  <section id="top-section" class="category-section">
+    <h2>상의</h2>
+    <div class="product-gallery">
+      <div class="product-card">
+        <img src="JPG1.jpg" alt="상의1">
+      </div>
+      <div class="product-card">
+        <img src="JPG2.jpg" alt="상의2">
+      </div>
     </div>
   </section>
 
-  <!-- 하의 -->
-  <section id="bottom-category" class="fade-in">
-    <h2 class="section-title">하의</h2>
-    <div class="gallery">
-      <div class="item"><img src="JPG 4.jpg" alt="하의1"><div class="item-text">슬랙스 팬츠</div></div>
-      <div class="item"><img src="JPG 1.jpg" alt="하의2"><div class="item-text">플리츠 스커트</div></div>
+  <!-- 하의 섹션 -->
+  <section id="bottom-section" class="category-section">
+    <h2>하의</h2>
+    <div class="product-gallery">
+      <div class="product-card">
+        <img src="JPG3.jpg" alt="하의1">
+      </div>
+      <div class="product-card">
+        <img src="JPG4.jpg" alt="하의2">
+      </div>
     </div>
   </section>
 
-  <!-- 세트 -->
-  <section id="set-category" class="fade-in">
-    <h2 class="section-title">세트</h2>
-    <div class="gallery">
-      <div class="item"><img src="JPG 2.jpg" alt="세트1"><div class="item-text">코디 셋업</div></div>
-      <div class="item"><img src="JPG 3.jpg" alt="세트2"><div class="item-text">베이지 투피스</div></div>
+  <!-- 상하의 세트 섹션 -->
+  <section id="set-section" class="category-section">
+    <h2>상하의 세트</h2>
+    <div class="product-gallery">
+      <div class="product-card">
+        <img src="JPG2.jpg" alt="세트1">
+      </div>
+      <div class="product-card">
+        <img src="JPG3.jpg" alt="세트2">
+      </div>
     </div>
   </section>
 
   <footer>
-    © 2025 GOUNCHARIM. All Rights Reserved.
+    <p>© 2025 GOUNCHARIM. All rights reserved.</p>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
