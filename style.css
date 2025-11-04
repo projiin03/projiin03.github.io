@@ -1,73 +1,86 @@
-/* 기본 */
+/* 색상 팔레트 */
 :root{
-  --bg:#faf7f2; --ink:#3d2b1f; --soft:#f5efe6; --line:#e0d4c0;
-  --accent:#d8c3a5; --accent-hover:#e4d1b9; --kakao:#FEE500; --kakao-ink:#3C1E1E;
+  --bg:#f8f5ef;
+  --ink:#3d2b1f;
+  --gold:#c1a36e;
+  --soft:#fdfaf4;
+  --line:#e3d7c3;
+  --kakao:#FEE500;
+  --kakao-ink:#3C1E1E;
 }
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
+
 body{
-  font-family: 'Pretendard','Noto Sans KR',system-ui,-apple-system,sans-serif;
-  background:var(--bg); color:var(--ink); overflow-x:hidden;
+  margin:0; background:var(--bg);
+  color:var(--ink); font-family:'Noto Serif KR',serif;
+  overflow-x:hidden;
 }
 
 /* 헤더 */
 header{
-  position:sticky; top:0; z-index:1000;
-  display:flex; align-items:center; gap:24px;
-  justify-content:space-between;
-  padding:16px 24px;
-  background:var(--soft); border-bottom:1px solid var(--line);
+  display:flex; justify-content:space-between; align-items:center;
+  background:var(--soft); padding:16px 48px;
+  border-bottom:1px solid var(--line);
+  box-shadow:0 4px 8px rgba(0,0,0,0.05);
 }
-.logo{font-weight:800; font-size:1.6rem; letter-spacing:2px}
-.gnb a{
-  text-decoration:none; color:var(--ink);
-  margin:0 10px; font-weight:600; opacity:.9; transition:.2s;
+.logo{
+  font-size:1.8rem; font-weight:700; letter-spacing:1px;
 }
-.gnb a:hover{opacity:1; color:#8b7355}
+nav a{
+  text-decoration:none; color:var(--ink); margin:0 14px;
+  font-weight:500; position:relative;
+}
+nav a::after{
+  content:""; position:absolute; left:0; bottom:-3px;
+  width:0; height:2px; background:var(--gold);
+  transition:width .3s ease;
+}
+nav a:hover::after{width:100%;}
 
-/* 로그인 영역 */
-.auth{display:flex; align-items:center; gap:12px}
+/* 카카오 로그인 */
 .kakao{
   background:var(--kakao); color:var(--kakao-ink);
-  border:0; border-radius:8px; padding:10px 16px; font-weight:800; cursor:pointer;
+  border:none; border-radius:20px; padding:8px 18px;
+  font-weight:700; cursor:pointer;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
-.kakao:hover{filter:brightness(.97)}
-.profile{display:flex; align-items:center; gap:8px}
-.profile img{width:28px; height:28px; border-radius:50%; object-fit:cover; border:1px solid #0001}
-.logout{
-  background:#0000000d; border:1px solid #0002; padding:6px 10px; border-radius:6px; cursor:pointer;
-}
-.logout:hover{background:#00000012}
+.kakao:hover{filter:brightness(0.95);}
 
-/* 히어로/슬라이드 */
-.hero{position:relative; width:100%; overflow:hidden}
-.slide{display:none; position:relative}
-.slide img{width:100%; height:90vh; object-fit:cover; display:block; filter:brightness(92%)}
-.caption{
+/* 배너 */
+.hero{position:relative;}
+.slide{display:none;}
+.slide img{
+  width:100%; height:90vh; object-fit:cover; filter:brightness(90%);
+}
+.text-box{
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  background:rgba(255,255,255,.72); padding:40px 60px; border-radius:12px;
-  text-align:center; box-shadow:0 10px 30px rgba(0,0,0,.08);
+  background:rgba(255,255,255,0.7);
+  padding:40px 60px; border-radius:12px;
+  text-align:center; box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
-.caption h1{font-size:2.6rem; margin:0 0 12px}
-.caption p{margin:0 0 20px}
-.caption button{
-  background:var(--accent); color:var(--ink); border:0; border-radius:8px;
-  padding:12px 22px; font-weight:700; cursor:pointer; transition:.2s;
-}
-.caption button:hover{background:var(--accent-hover)}
+.text-box h1{font-size:2.8rem; margin-bottom:12px;}
+.text-box p{font-size:1.2rem; color:#6b5840;}
 
 /* 페이드 효과 */
-.fade{animation:fade 1.2s ease-in-out}
-@keyframes fade{from{opacity:.3} to{opacity:1}}
+.fade{animation:fade 1.2s ease-in-out;}
+@keyframes fade{from{opacity:.4}to{opacity:1}}
+
+/* 소개 */
+.intro{text-align:center; padding:80px 20px;}
+.intro h2{font-size:2rem; margin-bottom:16px;}
+.intro p{line-height:1.8; color:#5a4b3c; font-size:1.1rem;}
 
 /* 푸터 */
-footer{background:var(--soft); text-align:center; padding:28px; color:#8b7355; font-size:.9rem}
+footer{
+  text-align:center; padding:24px;
+  background:var(--soft); color:#7a6a55; font-size:.9rem;
+}
 
 /* 반응형 */
-@media (max-width:768px){
-  .caption{padding:24px 20px}
-  .caption h1{font-size:1.8rem}
-  .gnb{display:none} /* 모바일에선 메뉴 숨김(필요시 토글로 확장 가능) */
+@media(max-width:768px){
+  header{flex-direction:column; gap:10px;}
+  .text-box{width:80%; padding:20px;}
+  .text-box h1{font-size:1.8rem;}
+  .text-box p{font-size:1rem;}
 }
 
 
