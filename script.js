@@ -16,15 +16,12 @@ cards.forEach(card => {
     popup.style.display = "block";
   });
 });
-
-closeBtn.addEventListener("click", () => {
-  popup.style.display = "none";
-});
+closeBtn.addEventListener("click", () => (popup.style.display = "none"));
 window.addEventListener("click", e => {
   if (e.target === popup) popup.style.display = "none";
 });
 
-// 스크롤 애니메이션
+// 스크롤 등장 애니메이션
 const fadeElems = document.querySelectorAll('.fade-in');
 function handleScroll() {
   fadeElems.forEach(el => {
@@ -37,7 +34,7 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 handleScroll();
 
-// 장바구니 버튼 클릭 이벤트
+// 장바구니 버튼
 const cartButtons = document.querySelectorAll('.cart-btn');
 cartButtons.forEach(btn => {
   btn.addEventListener('click', e => {
@@ -45,4 +42,6 @@ cartButtons.forEach(btn => {
     alert('상품이 장바구니에 담겼습니다! 🛒');
   });
 });
+
+
 
