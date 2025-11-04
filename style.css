@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font-family: 'HY견고딕', sans-serif;
-  background-color: #faf8f4;
+  background: linear-gradient(to right, #fdfbf7 0%, #f8f4ee 50%, #fdfbf7 100%);
   color: #2f2b28;
 }
 
@@ -40,6 +40,26 @@ nav a:hover { color: #a2825e; }
 }
 .kakao-login:hover { transform: scale(1.05); }
 
+/* 좌측 SNS 아이콘 */
+.side-icons {
+  position: fixed;
+  top: 40%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+}
+.side-icons img {
+  width: 28px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.side-icons img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 /* 배너 */
 .hero {
   background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d');
@@ -58,23 +78,26 @@ nav a:hover { color: #a2825e; }
   border-radius: 12px;
 }
 .overlay h2 {
-  font-size: 2rem; color: #3a2e20; margin: 0;
+  font-size: 2rem;
+  color: #3a2e20;
+  margin: 0;
 }
 .overlay p {
-  font-size: 1rem; color: #6b5a48;
+  font-size: 1rem;
+  color: #6b5a48;
 }
 
 /* 갤러리 */
 .gallery {
   padding: 4rem 2rem;
   text-align: center;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.03);
 }
 .gallery h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
   color: #3c2f1d;
 }
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -98,14 +121,8 @@ nav a:hover { color: #a2825e; }
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
-.card h3 {
-  font-size: 1rem;
-  margin: 10px 0 0 0;
-}
-.price {
-  color: #7a5b3a;
-  font-size: 0.95rem;
-}
+.card h3 { font-size: 1rem; margin: 10px 0 0; }
+.price { color: #7a5b3a; font-size: 0.95rem; }
 .cart-btn {
   background: #d8c3a5;
   border: none;
@@ -138,7 +155,39 @@ nav a:hover { color: #a2825e; }
   text-align: center;
 }
 .popup-content img {
-  width: 100%; border-radius: 10px; margin-bottom:
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.close {
+  position: absolute;
+  top: 20px; right: 25px;
+  color: #333;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* 등장 애니메이션 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 푸터 */
+footer {
+  background-color: #f3ece3;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #7a6e5c;
+}
+
+
 
 
 
