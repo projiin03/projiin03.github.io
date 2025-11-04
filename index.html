@@ -2,70 +2,59 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>고운차림 GOUNCHARIM</title>
-  <link rel="stylesheet" href="style.css?v=6.0" />
-  <!-- 카카오 로그인 SDK -->
+  <title>고운차림 | 단정함 속의 아름다움</title>
+  <link rel="stylesheet" href="style.css?v=7.0" />
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 <body>
   <!-- 헤더 -->
   <header>
-    <div class="logo">고운차림</div>
-    <nav class="gnb">
+    <div class="logo">GOUNCHARIM</div>
+    <nav>
       <a href="#">HOME</a>
       <a href="#">ABOUT</a>
       <a href="#">COLLECTION</a>
       <a href="#">CONTACT</a>
     </nav>
-
-    <!-- 로그인 영역 -->
-    <div class="auth">
-      <button id="kakao-login-btn" class="kakao">카카오 로그인</button>
-      <div id="profile" class="profile" hidden>
-        <img id="profile-image" alt="profile" />
-        <span id="profile-name"></span>
-        <button id="kakao-logout-btn" class="logout">로그아웃</button>
-      </div>
-    </div>
+    <button id="kakao-login-btn" class="kakao">카카오 로그인</button>
   </header>
 
-  <!-- 히어로 배너 (슬라이드) -->
+  <!-- 메인 배너 -->
   <section class="hero">
     <div class="slide fade">
-      <!-- 로컬 파일이 없으면 onerror로 무료 이미지로 자동 대체 -->
-      <img src="banner1.jpg"
-           alt="고운차림 배너1"
-           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1585158536693-4b8d5cbad7f2?auto=format&fit=crop&w=2000&q=90';" />
-      <div class="caption">
+      <img src="banner1.jpg" alt="배너1" 
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=2000&q=90';" />
+      <div class="text-box">
         <h1>단정함 속의 아름다움</h1>
         <p>고운차림 2025 Spring Collection</p>
-        <button>컬렉션 보기</button>
       </div>
     </div>
 
     <div class="slide fade">
-      <img src="banner2.jpg"
-           alt="고운차림 배너2"
-           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&w=2000&q=90';" />
-      <div class="caption">
+      <img src="banner2.jpg" alt="배너2"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=2000&q=90';" />
+      <div class="text-box">
         <h1>편안함이 주는 품격</h1>
-        <p>고운차림의 감성을 담은 자연스러움</p>
-        <button>Lookbook 보기</button>
+        <p>자연스러운 실루엣과 고운 선의 조화</p>
       </div>
     </div>
 
     <div class="slide fade">
-      <img src="banner3.jpg"
-           alt="고운차림 배너3"
-           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=2000&q=90';" />
-      <div class="caption">
-        <h1>Simple is Beautiful</h1>
-        <p>고운차림의 디자인 철학</p>
-        <button>브랜드 스토리</button>
+      <img src="banner3.jpg" alt="배너3"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=2000&q=90';" />
+      <div class="text-box">
+        <h1>고운차림의 감성</h1>
+        <p>Simple, Natural, Elegant</p>
       </div>
     </div>
+  </section>
+
+  <!-- 소개 -->
+  <section class="intro">
+    <h2>About GOUNCHARIM</h2>
+    <p>‘고운차림’은 전통의 단정함과 현대의 미감을 담아,  
+       자연스러움 속 품격을 추구하는 브랜드입니다.</p>
   </section>
 
   <!-- 푸터 -->
@@ -73,9 +62,11 @@
     <p>© 2025 GOUNCHARIM. All rights reserved.</p>
   </footer>
 
-  <script src="script.js?v=6.0"></script>
+  <script src="script.js?v=7.0"></script>
 </body>
 </html>
+
+
 
 
 
