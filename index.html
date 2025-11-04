@@ -2,125 +2,79 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>고운차림 GOUNCHARIM</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=HYGothic-Medium&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <h1>GOUNCHARIM</h1>
+  <header class="navbar">
+    <div class="logo">GOUNCHARIM</div>
     <nav>
-      <a href="#top">HOME</a>
-      <a href="#top">ABOUT</a>
-      <a href="#tops">TOP</a>
-      <a href="#bottoms">BOTTOM</a>
-      <a href="#sets">SET</a>
-      <a href="#contact">CONTACT</a>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">COLLECTION</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
     </nav>
-    <button class="kakao-login">카카오 로그인</button>
+    <button class="kakao-btn">카카오 로그인</button>
   </header>
 
-  <!-- Hero -->
-  <section id="top" class="hero">
-    <div class="overlay">
-      <h2>고운차림의 감성</h2>
+  <section class="hero">
+    <img src="KakaoTalk_20251104_094816332.png" alt="고운차림 메인 배너" class="hero-img" />
+    <div class="hero-text">
+      <h1>고운차림의 감성</h1>
       <p>단정함 속의 아름다움</p>
     </div>
   </section>
 
-  <!-- 상의 -->
-  <section id="tops" class="category-section">
+  <section class="category">
     <h2>상의</h2>
-    <div class="card-container">
-      <article class="card fade-in" data-title="베이직 셔츠" data-price="₩59,000" data-desc="깔끔한 실루엣의 데일리 셔츠" data-img="https://images.unsplash.com/photo-1581089781785-603411fa81e5?q=80&w=1000&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?q=80&w=800&auto=format&fit=crop" alt="셔츠">
-        <div class="card-body">
-          <h3>베이직 셔츠</h3>
-          <p class="price">₩59,000</p>
-          <div class="actions">
-            <button class="cart-btn">🛒 장바구니</button>
-            <button class="more-btn">자세히 보기</button>
-          </div>
-        </div>
-      </article>
-      <article class="card fade-in" data-title="니트 가디건" data-price="₩79,000" data-desc="부드러운 감촉의 봄 니트 가디건" data-img="https://images.unsplash.com/photo-1593032457862-9fcb96b9a4ab?q=80&w=1000&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1593032457862-9fcb96b9a4ab?q=80&w=800&auto=format&fit=crop" alt="가디건">
-        <div class="card-body">
-          <h3>니트 가디건</h3>
-          <p class="price">₩79,000</p>
-          <div class="actions">
-            <button class="cart-btn">🛒 장바구니</button>
-            <button class="more-btn">자세히 보기</button>
-          </div>
-        </div>
-      </article>
+    <div class="gallery">
+      <div class="item fade-in">
+        <img src="KakaoTalk_20251104_094822590.png" alt="상의1">
+      </div>
+      <div class="item fade-in">
+        <img src="KakaoTalk_20251104_094823873.png" alt="상의2">
+      </div>
     </div>
   </section>
 
-  <!-- 하의 -->
-  <section id="bottoms" class="category-section">
+  <section class="category">
     <h2>하의</h2>
-    <div class="card-container">
-      <article class="card fade-in" data-title="린넨 팬츠" data-price="₩69,000" data-desc="여름에도 시원한 린넨 팬츠" data-img="https://images.unsplash.com/photo-1521575107034-e0fa0b594529?q=80&w=1000&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1521575107034-e0fa0b594529?q=80&w=800&auto=format&fit=crop" alt="팬츠">
-        <div class="card-body">
-          <h3>린넨 팬츠</h3>
-          <p class="price">₩69,000</p>
-          <div class="actions">
-            <button class="cart-btn">🛒 장바구니</button>
-            <button class="more-btn">자세히 보기</button>
-          </div>
-        </div>
-      </article>
-      <article class="card fade-in" data-title="슬랙스" data-price="₩89,000" data-desc="정갈한 실루엣의 슬림핏 슬랙스" data-img="https://images.unsplash.com/photo-1604335399105-3f6f6b4a1fa1?q=80&w=1000&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1604335399105-3f6f6b4a1fa1?q=80&w=800&auto=format&fit=crop" alt="슬랙스">
-        <div class="card-body">
-          <h3>슬랙스</h3>
-          <p class="price">₩89,000</p>
-          <div class="actions">
-            <button class="cart-btn">🛒 장바구니</button>
-            <button class="more-btn">자세히 보기</button>
-          </div>
-        </div>
-      </article>
+    <div class="gallery">
+      <div class="item fade-in">
+        <img src="KakaoTalk_20251104_094816332.png" alt="하의1">
+      </div>
+      <div class="item fade-in">
+        <img src="KakaoTalk_20251104_094822590.png" alt="하의2">
+      </div>
     </div>
   </section>
 
-  <!-- 상하의 -->
-  <section id="sets" class="category-section">
-    <h2>상하의 세트</h2>
-    <div class="card-container">
-      <article class="card fade-in" data-title="린넨 세트업" data-price="₩139,000" data-desc="가벼운 착용감의 린넨 투피스 세트" data-img="https://images.unsplash.com/photo-1617136499278-59e8c1c7c1e8?q=80&w=1000&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1617136499278-59e8c1c7c1e8?q=80&w=800&auto=format&fit=crop" alt="세트업">
-        <div class="card-body">
-          <h3>린넨 세트업</h3>
-          <p class="price">₩139,000</p>
-          <div class="actions">
-            <button class="cart-btn">🛒 장바구니</button>
-            <button class="more-btn">자세히 보기</button>
-          </div>
-        </div>
-      </article>
+  <section class="category">
+    <h2>세트</h2>
+    <div class="gallery">
+      <div class="item fade-in">
+        <img src="KakaoTalk_20251104_094823873.png" alt="세트1">
+      </div>
+      <div class="item fade-in">
+        <img src="KakaoTalk_20251104_094816332.png" alt="세트2">
+      </div>
     </div>
   </section>
 
-  <footer id="contact">
+  <footer>
     <p>© 2025 GOUNCHARIM. All rights reserved.</p>
   </footer>
-
-  <div id="product-modal" class="modal">
-    <div class="modal-content">
-      <button class="close">&times;</button>
-      <img id="modal-img" src="" alt="">
-      <h3 id="modal-title"></h3>
-      <p id="modal-price" class="price"></p>
-      <p id="modal-desc" class="desc"></p>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
 
 
