@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>고운차림 GOUNCHARIM</title>
 
-  <!-- 폰트 로드 -->
-  <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HY견고딕.woff2" rel="stylesheet" as="font" type="font/woff2" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- 폰트 -->
+  <link href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HY견고딕.woff2" rel="stylesheet" as="font" type="font/woff2" crossorigin />
 
   <!-- CSS 연결 -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -27,40 +26,49 @@
   <section class="hero">
     <div class="overlay">
       <h2>고운차림의 감성</h2>
-      <p>Simple. Natural. Elegant.</p>
+      <p>단정함 속의 아름다움</p>
     </div>
   </section>
 
   <section class="gallery">
     <h2>2025 S/S COLLECTION</h2>
     <div class="card-container">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="원피스">
+      <div class="card" data-title="플로럴 원피스" data-desc="봄을 담은 부드러운 실루엣" data-img="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="원피스" />
         <h3>플로럴 원피스</h3>
-        <p>봄을 담은 부드러운 실루엣</p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a" alt="자켓">
+
+      <div class="card" data-title="린넨 자켓" data-desc="자연스러운 고운 감성의 라인" data-img="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a">
+        <img src="https://images.unsplash.com/photo-1601333144097-03b6b4b97c6a" alt="자켓" />
         <h3>린넨 자켓</h3>
-        <p>자연스러운 고운 감성의 라인</p>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e" alt="블라우스">
+
+      <div class="card" data-title="화이트 블라우스" data-desc="단정함 속의 아름다움" data-img="https://images.unsplash.com/photo-1558769132-cb1aea458c5e">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e" alt="블라우스" />
         <h3>화이트 블라우스</h3>
-        <p>단정함 속의 아름다움</p>
       </div>
     </div>
   </section>
 
+  <!-- 팝업 -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <img id="popup-img" src="" alt="">
+      <h3 id="popup-title"></h3>
+      <p id="popup-desc"></p>
+    </div>
+  </div>
+
   <footer>
     <p>© 2025 GOUNCHARIM. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
 
-</body>
-</html>
 
 
 
