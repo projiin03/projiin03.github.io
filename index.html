@@ -56,7 +56,7 @@
       position: relative;
       width: 100%;
       height: 70vh;
-      background: url('JPG 1.jpg') center/cover no-repeat;
+      background: url('슬렉스 사진.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -206,12 +206,9 @@
   </footer>
 
   <script>
-    // 스크롤 애니메이션
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if(entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.2 });
 
@@ -219,6 +216,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
