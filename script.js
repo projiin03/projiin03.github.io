@@ -1,30 +1,30 @@
-/* 슬라이드 */
-let index = 0;
-function showSlides(){
-  const slides = document.getElementsByClassName("slide");
-  for(let i=0;i<slides.length;i++) slides[i].style.display="none";
-  index++;
-  if(index > slides.length) index = 1;
-  slides[index-1].style.display="block";
-  setTimeout(showSlides, 5000);
-}
-showSlides();
+// 팝업 열기
+const cards = document.querySelectorAll(".card");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+const popupTitle = document.getElementById("popup-title");
+const popupDesc = document.getElementById("popup-desc");
+const closeBtn = document.querySelector(".close");
 
-/* 카카오 로그인 */
-const KAKAO_APP_KEY = "본인_JavaScript_키_여기";
-Kakao.init(KAKAO_APP_KEY);
-
-const loginBtn = document.getElementById("kakao-login-btn");
-loginBtn.addEventListener("click",()=>{
-  Kakao.Auth.login({
-    success: function(auth){
-      alert("카카오 로그인 성공!");
-    },
-    fail: function(err){
-      alert("로그인 실패");
-      console.error(err);
-    }
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    popupImg.src = card.dataset.img;
+    popupTitle.textContent = card.dataset.title;
+    popupDesc.textContent = card.dataset.desc;
+    popup.style.display = "block";
   });
+});
+
+// 팝업 닫기
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+// 팝업 외부 클릭 시 닫기
+window.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
 });
 
 
