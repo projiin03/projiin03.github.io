@@ -152,7 +152,29 @@ footer{
 /* 반응형 */
 @media (max-width: 768px) {
   .card img { height: 240px; }
+}/* HY견고딕 폰트 적용 */
+@font-face {
+  font-family: 'HY견고딕';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HY견고딕.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
+
+/* 상단 네비게이션 폰트 변경 */
+header nav a {
+  font-family: 'HY견고딕', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #3c2f1d;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #b5956a; /* 고운차림 감성의 베이지 포인트 */
+}
+
+
 
 
 
