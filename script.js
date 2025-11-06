@@ -1,41 +1,23 @@
-// 스크롤 시 fade-in
-const fadeEls = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver((entries) => {
+// "신상품 보러가기" 버튼 클릭 시 경고창
+document.getElementById('shopNowBtn').addEventListener('click', function () {
+  alert("신상품 페이지는 아직 준비 중이에요 😊");
+});
+
+// 스크롤 시 상품 카드 등장
+const cards = document.querySelectorAll('.product-card');
+
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     }
   });
-}, { threshold: 0.3 });
-fadeEls.forEach(el => observer.observe(el));
-
-// 상세 팝업
-const popup = document.getElementById('popup');
-const popupImg = document.getElementById('popup-img');
-const popupTitle = document.getElementById('popup-title');
-const popupDesc = document.getElementById('popup-desc');
-const closeBtn = document.querySelector('.close');
-
-document.querySelectorAll('.large-item').forEach(item => {
-  item.addEventListener('click', () => {
-    popupImg.src = item.querySelector('img').src;
-    popupTitle.textContent = item.dataset.title;
-    popupDesc.textContent = item.dataset.desc;
-    popup.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  });
+}, {
+  threshold: 0.2
 });
 
-closeBtn.addEventListener('click', () => {
-  popup.style.display = 'none';
-  document.body.style.overflow = 'auto';
-});
+cards.forEach(card => observer.observe(card));
 
-popup.addEventListener('click', (e) => {
-  if (e.target === popup) {
-    popup.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-});
+
 
 
