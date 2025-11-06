@@ -1,4 +1,4 @@
-/* 전체 설정 */
+/* 전체 스타일 */
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
@@ -58,7 +58,6 @@ nav a:hover {
   margin-bottom: 40px;
 }
 
-/* 버튼 */
 .hero button {
   padding: 14px 28px;
   font-size: 16px;
@@ -75,11 +74,68 @@ nav a:hover {
   background-color: #ffd3a6;
 }
 
-/* 부드러운 나타나기 */
+/* 인기 상품 섹션 */
+.popular {
+  padding: 80px 20px;
+  background-color: #fffef9;
+  text-align: center;
+}
+
+.popular h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.product-card {
+  width: 280px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #888;
+  margin-top: 8px;
+}
+
+/* 등장 효과 */
+.product-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 배너 페이드인 */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
 
 
 
